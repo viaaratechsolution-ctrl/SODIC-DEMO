@@ -1,0 +1,8 @@
+{
+  "name": "Sodic Property Workspace",
+  "description": " Property Workspace",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
