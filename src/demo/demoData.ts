@@ -26,10 +26,6 @@ export const DEMO_SCREEN_ORDER: DemoScreenId[] = [
   'performance',
 ];
 
-export const FIRM_INFO = {
-  emblem: '/assets/aistudio/channels4_profile_cdc8d64e.jpg',
-};
-
 export const DEMO_EMPLOYEES: DemoEmployee[] = [
   {
     id: 'emp-1',
@@ -364,24 +360,24 @@ export const INITIAL_DEMO_TASKS: DemoTask[] = [
     alert24h: true,
   },
   {
-    id: 'task-sodic-west-visit',
-    title: 'معاينة موقع - سوديك ويست',
-    titleEn: 'Site Inspection – SODIC West',
+    id: 'task-west-park-visit',
+    title: 'معاينة موقع - ويست بارك',
+    titleEn: 'Site Inspection – West Park',
     description:
-      'جولة معاينة ميدانية للوحدات الجاهزة في المرحلة الرابعة بسوديك ويست – الشيخ زايد، لتوثيق جاهزية الواجهات والمرافق قبل جدولة مواعيد التسليم.',
+      'جولة معاينة ميدانية للوحدات الجاهزة في المرحلة الرابعة بكمبوند ويست بارك – الشيخ زايد، لتوثيق جاهزية الواجهات والمرافق قبل جدولة مواعيد التسليم.',
     descriptionEn:
-      'Field inspection walk-through for Phase 4 units in SODIC West – Sheikh Zayed to verify facade and utility readiness before scheduling client handovers.',
+      'Field inspection walk-through for Phase 4 units in West Park – Sheikh Zayed to verify facade and utility readiness before scheduling client handovers.',
     category: 'inspection',
-    projectKey: 'sodic-west',
-    matterRef: 'SW/2290/26',
-    unitCode: 'SW-PH4-19',
+    projectKey: 'west-park',
+    matterRef: 'WP/2290/26',
+    unitCode: 'WP-PH4-19',
     clientName: 'م. طارق الشناوي',
     clientNameEn: 'Eng. Tarek El-Shenawy',
-    compoundName: 'سوديك ويست · الشيخ زايد',
-    compoundNameEn: 'SODIC West · Sheikh Zayed',
+    compoundName: 'ويست بارك · الشيخ زايد',
+    compoundNameEn: 'West Park · Sheikh Zayed',
     propertyMeta: {
-      compoundName: 'سوديك ويست · الشيخ زايد',
-      compoundNameEn: 'SODIC West · Sheikh Zayed',
+      compoundName: 'ويست بارك · الشيخ زايد',
+      compoundNameEn: 'West Park · Sheikh Zayed',
       unitType: 'تاون هاوس · 295 م²',
       unitTypeEn: 'Townhouse · 295 sqm',
       priceEgp: '14,200,000 ج.م',
@@ -438,8 +434,8 @@ export const INITIAL_DEMO_TASKS: DemoTask[] = [
     status: 'site-visit',
     progress: 60,
     image: eastTownCompoundImg,
-    imageCaption: 'المرحلة الرابعة · سوديك ويست – الشيخ زايد',
-    imageCaptionEn: 'Phase 4 · SODIC West – Sheikh Zayed',
+    imageCaption: 'المرحلة الرابعة · ويست بارك – الشيخ زايد',
+    imageCaptionEn: 'Phase 4 · West Park – Sheikh Zayed',
     stepperStages: ['تم الحجز', 'تم التعاقد', 'معاينة الوحدة', 'التسليم'],
     stepperStagesEn: ['Reserved', 'Contracted', 'Inspected', 'Handed over'],
     checklistSteps: [
@@ -676,21 +672,21 @@ export const INITIAL_DEMO_TASKS: DemoTask[] = [
     alert24h: false,
   },
   {
-    id: 'task-sodic-west-handover-done',
-    title: 'تسليم مفاتيح توين هاوس – سوديك ويست',
-    titleEn: 'Twin House Key Handover – SODIC West',
+    id: 'task-west-park-handover-done',
+    title: 'تسليم مفاتيح توين هاوس – ويست بارك',
+    titleEn: 'Twin House Key Handover – West Park',
     description:
       'تم توقيع محضر الاستلام النهائي وتسليم مفاتيح الوحدة وبطاقات الدخول للكمبوند.',
     descriptionEn:
       'Final handover protocol signed; unit keys and community access cards delivered to owner.',
     category: 'handover',
-    projectKey: 'sodic-west',
-    matterRef: 'SW/2041/26',
-    unitCode: 'SW-TH07-02',
+    projectKey: 'west-park',
+    matterRef: 'WP/2041/26',
+    unitCode: 'WP-TH07-02',
     clientName: 'السيدة داليا محسن',
     clientNameEn: 'Ms. Dalia Mohsen',
-    compoundName: 'سوديك ويست · الشيخ زايد',
-    compoundNameEn: 'SODIC West · Sheikh Zayed',
+    compoundName: 'ويست بارك · الشيخ زايد',
+    compoundNameEn: 'West Park · Sheikh Zayed',
     installment: {
       label: 'دفعة تسليم المفاتيح',
       labelEn: 'Key Handover Payment',
@@ -765,12 +761,12 @@ export const INITIAL_DEMO_ACTIVITIES: DemoActivity[] = [
     actorAvatar: omarKhaledImg,
     summary: 'عمر خالد أنهى المعاينة المبدئية',
     summaryEn: 'Omar Khaled completed initial inspection',
-    detail: 'تحديث جاهزية المرحلة الرابعة في سوديك ويست',
-    detailEn: 'Updated Phase 4 readiness in SODIC West',
+    detail: 'تحديث جاهزية المرحلة الرابعة في ويست بارك',
+    detailEn: 'Updated Phase 4 readiness in West Park',
     time: 'منذ 25 د',
     timeEn: '25m ago',
     kind: 'update',
-    taskId: 'task-sodic-west-visit',
+    taskId: 'task-west-park-visit',
   },
 ];
 
@@ -824,9 +820,9 @@ export const INITIAL_DEMO_MESSAGES: DemoMessage[] = [
     senderNameEn: 'Omar Khaled',
     senderRole: 'مهندس الموقع',
     senderRoleEn: 'Site Engineer',
-    text: 'معاينة سوديك ويست تمام، راجعنا التشطيبات والوحدة جاهزة للاستلام في الموعد المحدد.',
+    text: 'معاينة ويست بارك تمام، راجعنا التشطيبات والوحدة جاهزة للاستلام في الموعد المحدد.',
     textEn:
-      'SODIC West inspection looks solid—finishing verified and unit is ready for scheduled handover.',
+      'West Park inspection looks solid—finishing verified and unit is ready for scheduled handover.',
     time: '9:24 ص',
     timeEn: '9:24 AM',
   },
@@ -866,11 +862,11 @@ export const INITIAL_NOTIFICATIONS: DemoNotification[] = [
   },
   {
     id: 'notif-3',
-    title: 'معاينة موقع - سوديك ويست جاهزة للمراجعة الهندسية',
-    titleEn: 'Site Inspection – SODIC West ready for engineering review',
+    title: 'معاينة موقع - ويست بارك جاهزة للمراجعة الهندسية',
+    titleEn: 'Site Inspection – West Park ready for engineering review',
     time: 'منذ ساعتين',
     timeEn: '2h ago',
-    taskId: 'task-sodic-west-visit',
+    taskId: 'task-west-park-visit',
     unread: false,
   },
 ];
@@ -951,8 +947,8 @@ export const SCRIPTED_TEAM_REPLIES = [
     senderNameEn: 'Omar Khaled',
     senderRole: 'مهندس الموقع',
     senderRoleEn: 'Site Engineer',
-    text: 'أنهينا المعاينة الفنية في سوديك ويست ورفعنا صور الجاهزية للمشروع.',
+    text: 'أنهينا المعاينة الفنية في ويست بارك ورفعنا صور الجاهزية للمشروع.',
     textEn:
-      'Completed technical inspection at SODIC West and uploaded readiness photos.',
+      'Completed technical inspection at West Park and uploaded readiness photos.',
   },
 ];

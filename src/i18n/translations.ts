@@ -11,7 +11,6 @@ export interface SiteDictionary {
     viaaraHomeLabel: string;
     viaaraBackToTopLabel: string;
     viaaraLogoAlt: string;
-    sodicLogoAlt: string;
     countryBadge: string;
   };
   nav: {
@@ -35,12 +34,6 @@ export interface SiteDictionary {
     tryDemo: string;
     aboutViaara: string;
     stats: { value: string; label: string }[];
-  };
-  sodicShowcase: {
-    title: string;
-    subtitle: string;
-    scenariosLabel: string;
-    projects: string[];
   };
   about: {
     kicker: string;
@@ -114,7 +107,7 @@ export interface SiteDictionary {
     phone2: string;
   };
   footer: {
-    sodicTag: string;
+    platformTag: string;
     copyright: string;
   };
   demoUi: {
@@ -197,7 +190,7 @@ export interface SiteDictionary {
       all: string;
       'east-town': string;
       villette: string;
-      'sodic-west': string;
+      'west-park': string;
     };
     home: {
       greeting: (firstName: string) => string;
@@ -491,18 +484,17 @@ export interface SiteDictionary {
 export const translations: Record<Language, SiteDictionary> = {
   ar: {
     meta: {
-      title: 'فيارا تك — منصة إدارة مشروعات ومبيعات وتسليمات سوديك (SODIC)',
+      title: 'فيارا تك — منصة إدارة المشروعات والمبيعات والتسليمات العقارية',
       description:
-        'تقدّم فيارا تك منصة رقمية متكاملة لشركة سوديك لإدارة الإطلاقات، وحجوزات الوحدات، والتسليمات، والمعاينات الميدانية، ومراجعة العقود، ومتابعة العملاء لحظيًا.',
-      ogTitle: 'فيارا تك — منصة إدارة مشروعات ومبيعات وتسليمات سوديك (SODIC)',
+        'تقدّم فيارا تك منصة رقمية متكاملة لشركات التطوير العقاري لإدارة الإطلاقات، وحجوزات الوحدات، والتسليمات، والمعاينات الميدانية، ومراجعة العقود، ومتابعة العملاء لحظيًا.',
+      ogTitle: 'فيارا تك — منصة إدارة المشروعات والمبيعات والتسليمات العقارية',
       ogDescription:
-        'منصة تشغيل متكاملة لفرق المبيعات والتسليم والمواقع وخدمة العملاء في مشروعات سوديك مع رؤية فورية للإدارة.',
+        'منصة تشغيل متكاملة لفرق المبيعات والتسليم والمواقع وخدمة العملاء في المشروعات العقارية مع رؤية فورية للإدارة.',
     },
     brand: {
       viaaraHomeLabel: 'فيارا تك — الرئيسية',
       viaaraBackToTopLabel: 'فيارا تك — العودة للأعلى',
       viaaraLogoAlt: 'شعار فيارا تك',
-      sodicLogoAlt: 'شعار شركة سوديك',
       countryBadge: 'مصر',
     },
     nav: {
@@ -519,11 +511,11 @@ export const translations: Record<Language, SiteDictionary> = {
       contact: 'تواصل معنا',
     },
     hero: {
-      badge: 'عرض تقديمي مُعدّ خصيصًا لشركة سوديك (SODIC)',
+      badge: 'عرض تفاعلي لمنصة إدارة المبيعات والتسليمات العقارية',
       titlePrefix: 'إدارة كل إطلاق وتسليم ووحدة،',
       titleHighlight: 'في تناغم لحظي كامل.',
       description:
-        'طوّرت فيارا تك منصة تشغيل موحدة تمنح قيادات سوديك ومديري المشروعات رؤية لحظية على حجوزات الوحدات، والتسليمات، والمعاينات الميدانية، ومراجعة العقود، ومتابعة العملاء من شاشة واحدة.',
+        'طوّرت فيارا تك منصة تشغيل موحدة تمنح قيادات التطوير العقاري ومديري المشروعات رؤية لحظية على حجوزات الوحدات، والتسليمات، والمعاينات الميدانية، ومراجعة العقود، ومتابعة العملاء من شاشة واحدة.',
       tryDemo: 'جرّب المنصة مباشرة',
       aboutViaara: 'تعرّف على فيارا تك',
       stats: [
@@ -531,12 +523,6 @@ export const translations: Record<Language, SiteDictionary> = {
         { value: '+20', label: 'شراكة مع شركات ومؤسسات كبرى' },
         { value: '100%', label: 'ترابط لحظي بين المبيعات والموقع' },
       ],
-    },
-    sodicShowcase: {
-      title: 'مُعدّ خصيصًا لشركة سوديك',
-      subtitle: 'تجربة تفاعلية مبنية على سيناريوهات العمل اليومية في مشروعاتكم.',
-      scenariosLabel: 'سيناريوهات العرض التجريبي',
-      projects: ['East Town', 'Villette', 'SODIC West'],
     },
     about: {
       kicker: 'عن فيارا تك',
@@ -580,7 +566,7 @@ export const translations: Record<Language, SiteDictionary> = {
       ],
     },
     product: {
-      kicker: 'المنصة المقترحة لسوديك',
+      kicker: 'المنصة العقارية المقترحة',
       titlePrefix: 'مساحة عمل المبيعات والتسليم —',
       titleHighlight: 'ترابط كامل لعمليات التطوير العقاري.',
       subtitle:
@@ -593,7 +579,7 @@ export const translations: Record<Language, SiteDictionary> = {
       ],
       solutionTitle: 'الحل الموحد من فيارا تك',
       solutionHeading:
-        'مرجع واحد موثوق لإدارة سوديك بالكامل — كل حجز، وكل معاينة موقع، وكل تسليم وحدة مرتبط بمسؤول محدد، وموعد واضح، ومرحلة حية، ومستندات ومحادثة موثقة.',
+        'مرجع واحد موثوق لإدارة العمليات العقارية بالكامل — كل حجز، وكل معاينة موقع، وكل تسليم وحدة مرتبط بمسؤول محدد، وموعد واضح، ومرحلة حية، ومستندات ومحادثة موثقة.',
       solutionBody:
         'يتوقف المديرون عن ملاحقة التحديثات يدويًا، ويعرف كل فرد في المبيعات أو الموقع أو خدمة العملاء خطوته التالية بوضوح، بينما تراقب الإدارة مؤشر الإنجاز العام لكل كمبوند لحظة بلحظة.',
       features: [
@@ -658,7 +644,7 @@ export const translations: Record<Language, SiteDictionary> = {
     },
     demoSection: {
       kicker: 'التجربة التفاعلية الحية',
-      titlePrefix: 'اختبر تطبيق سوديك',
+      titlePrefix: 'اختبر تطبيق إدارة المشروعات',
       titleHighlight: 'بشكل حي ومباشر.',
       subtitle:
         'هذه نسخة تفاعلية كاملة وليست شاشات ثابتة. افتح تفاصيل تسليم فيلا في فيليت، وحدّث خطوات التسليم، وأضف مهمة جديدة، وتفاعل في محادثة الفريق لترى مؤشر الإنجاز يتحدث فورًا.',
@@ -687,23 +673,23 @@ export const translations: Record<Language, SiteDictionary> = {
     },
     contact: {
       titlePrefix: 'هل أنتم مستعدون لتوحيد عمليات',
-      titleHighlight: 'المبيعات والتسليم في سوديك؟',
+      titleHighlight: 'المبيعات والتسليم في مشروعاتكم؟',
       subtitle:
-        'يسعدنا تقديم عرض تجريبي مخصص لقيادات سوديك وفرق المشروعات مع خطة ربط وتنفيذ تتكامل مع أنظمتكم الحالية خلال أسابيع.',
+        'يسعدنا تقديم عرض تجريبي مخصص لقيادات التطوير العقاري وفرق المشروعات مع خطة ربط وتنفيذ تتكامل مع أنظمتكم الحالية خلال أسابيع.',
       ctaButton: 'اطلب جلسة عرض وتخصيص',
       email: 'info@viaara-tech.com',
       phone1: '+20 1000 843 003',
       phone2: '+20 1000 615 819',
     },
     footer: {
-      sodicTag: 'عرض تقديمي خاص بسوديك',
+      platformTag: 'منصة تشغيل الفرق العقارية',
       copyright: '© 2026 فيارا تك (VIAARA TECH). جميع الحقوق محفوظة.',
     },
     demoUi: {
       firm: {
-        firmName: 'سوديك (SODIC)',
-        shortFirmName: 'سوديك · فريق المبيعات والتسليم',
-        workspaceTag: 'سوديك · فريق المبيعات والتسليم',
+        firmName: 'آفاق للتطوير العقاري',
+        shortFirmName: 'آفاق العقارية · فريق المبيعات والتسليم',
+        workspaceTag: 'آفاق العقارية · فريق المبيعات والتسليم',
         subtitle: 'إدارة المبيعات والتسليمات والمواقع',
         channelSubtitle: 'فريق المبيعات والتسليم · 6 أعضاء',
         regionBadge: 'مصر',
@@ -718,7 +704,7 @@ export const translations: Record<Language, SiteDictionary> = {
         tasks: {
           num: '02',
           title: 'المهام',
-          caption: 'أدر حجوزات الوحدات والعقود والتسليمات عبر مشروعات سوديك.',
+          caption: 'أدر حجوزات الوحدات والعقود والتسليمات عبر جميع المشروعات.',
           headerTitle: 'المهام',
         },
         'task-details': {
@@ -816,7 +802,7 @@ export const translations: Record<Language, SiteDictionary> = {
         all: 'كل المشروعات',
         'east-town': 'إيست تاون',
         villette: 'فيليت',
-        'sodic-west': 'سوديك ويست',
+        'west-park': 'ويست بارك',
       },
       home: {
         greeting: (firstName) => `صباح الخير، ${firstName}`,
@@ -843,7 +829,7 @@ export const translations: Record<Language, SiteDictionary> = {
           `جميع الأقساط المتأخرة مسددة · ${count} دفعة مستحقة هذا الأسبوع`,
         allPaidSummary: 'جميع الأقساط والدفعات مسددة بالكامل',
         openSnagsSummary: (count) =>
-          `، مع ${count} ملاحظة معاينة فنية قيد المعالجة في فيليت وسوديك ويست.`,
+          `، مع ${count} ملاحظة معاينة فنية قيد المعالجة في فيليت وويست بارك.`,
         allSnagsClosedSummary: '، وجميع ملاحظات المعاينة الفنية مغلقة وجاهزة للتسليم.',
         priorityFollowUpPrefix: 'أولوية المتابعة:',
         upcomingTasksTitle: 'المهام القادمة',
@@ -863,7 +849,7 @@ export const translations: Record<Language, SiteDictionary> = {
         sortNewest: 'الأحدث',
         sortDeadline: 'الموعد',
         sortPriority: 'الأولوية',
-        projectFilterLabel: 'تصفية حسب مشروع سوديك',
+        projectFilterLabel: 'تصفية حسب المشروع',
         filters: {
           all: 'الكل',
           'in-progress': 'جاري التنفيذ',
@@ -1097,7 +1083,7 @@ export const translations: Record<Language, SiteDictionary> = {
         snagReopened: 'أُعيدت الملاحظة للمعالجة',
         snagAdded: 'تمت إضافة ملاحظة المعاينة الفنية',
         sharedAgain: 'تمت المشاركة مجددًا',
-        sharedToChat: 'تمت مشاركة المهمة في محادثة فريق سوديك',
+        sharedToChat: 'تمت مشاركة المهمة في محادثة الفريق',
         openChat: 'فتح المحادثة',
         attachedToChat: 'تم إرفاق المهمة في محادثة الفريق',
         reminderSentTo: (name) => `تم إرسال التذكير إلى ${name}`,
@@ -1126,18 +1112,17 @@ export const translations: Record<Language, SiteDictionary> = {
 
   en: {
     meta: {
-      title: 'VIAARA TECH — SODIC Sales, Handover & Project Operations Platform',
+      title: 'VIAARA TECH — Real Estate Sales, Handover & Project Operations Platform',
       description:
-        'VIAARA TECH delivers a unified digital operations workspace for SODIC to manage project launches, unit reservations, villa handovers, site inspections, contract reviews, and live client follow-ups.',
-      ogTitle: 'VIAARA TECH — SODIC Sales, Handover & Project Operations Platform',
+        'VIAARA TECH delivers a unified digital operations workspace for real estate developers to manage project launches, unit reservations, villa handovers, site inspections, contract reviews, and live client follow-ups.',
+      ogTitle: 'VIAARA TECH — Real Estate Sales, Handover & Project Operations Platform',
       ogDescription:
-        'End-to-end operational visibility for SODIC sales, handover, site engineering, and customer care teams in real time.',
+        'End-to-end operational visibility for real estate sales, handover, site engineering, and customer care teams in real time.',
     },
     brand: {
       viaaraHomeLabel: 'VIAARA TECH — Home',
       viaaraBackToTopLabel: 'VIAARA TECH — Back to top',
       viaaraLogoAlt: 'VIAARA TECH Logo',
-      sodicLogoAlt: 'SODIC Logo',
       countryBadge: 'Egypt',
     },
     nav: {
@@ -1154,11 +1139,11 @@ export const translations: Record<Language, SiteDictionary> = {
       contact: 'Contact Us',
     },
     hero: {
-      badge: 'Executive Showcase Prepared for SODIC',
+      badge: 'Interactive Showcase · Real Estate Operations Platform',
       titlePrefix: 'Manage every launch, unit, and handover,',
       titleHighlight: 'in real-time harmony.',
       description:
-        'VIAARA TECH built a unified operations platform giving SODIC leadership and project managers live visibility across unit reservations, handovers, site inspections, contract reviews, and client follow-ups from one screen.',
+        'VIAARA TECH built a unified operations platform giving real estate leadership and project managers live visibility across unit reservations, handovers, site inspections, contract reviews, and client follow-ups from one screen.',
       tryDemo: 'Try the Live Demo',
       aboutViaara: 'About VIAARA TECH',
       stats: [
@@ -1166,12 +1151,6 @@ export const translations: Record<Language, SiteDictionary> = {
         { value: '20+', label: 'Enterprise & developer partnerships' },
         { value: '100%', label: 'Real-time sync between sales & site' },
       ],
-    },
-    sodicShowcase: {
-      title: 'Prepared specially for SODIC',
-      subtitle: 'An interactive experience built around the daily scenarios of your projects.',
-      scenariosLabel: 'Live Demo Project Scenarios',
-      projects: ['East Town', 'Villette', 'SODIC West'],
     },
     about: {
       kicker: 'About VIAARA TECH',
@@ -1215,7 +1194,7 @@ export const translations: Record<Language, SiteDictionary> = {
       ],
     },
     product: {
-      kicker: 'Proposed Platform for SODIC',
+      kicker: 'Proposed Real Estate Platform',
       titlePrefix: 'Sales & Handover Workspace —',
       titleHighlight: 'complete clarity across real estate operations.',
       subtitle:
@@ -1228,7 +1207,7 @@ export const translations: Record<Language, SiteDictionary> = {
       ],
       solutionTitle: 'The Unified Solution by VIAARA TECH',
       solutionHeading:
-        'One single source of truth for SODIC operations — every reservation, site inspection, and unit handover is tied to an owner, deadline, live milestone, documents, and team thread.',
+        'One single source of truth for real estate operations — every reservation, site inspection, and unit handover is tied to an owner, deadline, live milestone, documents, and team thread.',
       solutionBody:
         'Managers stop chasing status updates manually. Every person across sales, site engineering, and customer care knows their exact next action while leadership monitors real-time compound progress.',
       features: [
@@ -1293,7 +1272,7 @@ export const translations: Record<Language, SiteDictionary> = {
     },
     demoSection: {
       kicker: 'Interactive Live Prototype',
-      titlePrefix: 'Experience the SODIC app',
+      titlePrefix: 'Experience the workspace app',
       titleHighlight: 'live in action.',
       subtitle:
         'This is a fully interactive working prototype—not static screens. Open the Villa Handover in Villette, tick checklist steps, add a new unit task, and message the team to watch the Progress Index update live.',
@@ -1322,23 +1301,23 @@ export const translations: Record<Language, SiteDictionary> = {
     },
     contact: {
       titlePrefix: 'Ready to unify sales and handover operations',
-      titleHighlight: 'across SODIC?',
+      titleHighlight: 'across your projects?',
       subtitle:
-        'We would be delighted to host a tailored walkthrough for SODIC leadership and project teams with an integration roadmap aligned to your systems within weeks.',
+        'We would be delighted to host a tailored walkthrough for your leadership and project teams with an integration roadmap aligned to your systems within weeks.',
       ctaButton: 'Request a Custom Walkthrough',
       email: 'info@viaara-tech.com',
       phone1: '+20 1000 843 003',
       phone2: '+20 1000 615 819',
     },
     footer: {
-      sodicTag: 'Presentation prepared for SODIC',
+      platformTag: 'Real Estate Operations Platform',
       copyright: '© 2026 VIAARA TECH. All rights reserved.',
     },
     demoUi: {
       firm: {
-        firmName: 'SODIC',
-        shortFirmName: 'SODIC · Sales & Handover Team',
-        workspaceTag: 'SODIC · Sales & Handover Team',
+        firmName: 'Afaq Developments',
+        shortFirmName: 'Afaq Developments · Sales & Handover Team',
+        workspaceTag: 'Afaq Developments · Sales & Handover Team',
         subtitle: 'Sales, Handover & Site Operations',
         channelSubtitle: 'Sales & Handover Team · 6 members',
         regionBadge: 'Egypt',
@@ -1353,7 +1332,7 @@ export const translations: Record<Language, SiteDictionary> = {
         tasks: {
           num: '02',
           title: 'Tasks',
-          caption: 'Manage reservations, contracts, and handovers across SODIC projects.',
+          caption: 'Manage reservations, contracts, and handovers across all projects.',
           headerTitle: 'Tasks',
         },
         'task-details': {
@@ -1451,7 +1430,7 @@ export const translations: Record<Language, SiteDictionary> = {
         all: 'All Projects',
         'east-town': 'East Town',
         villette: 'Villette',
-        'sodic-west': 'SODIC West',
+        'west-park': 'West Park',
       },
       home: {
         greeting: (firstName) => `Good morning, ${firstName}`,
@@ -1478,7 +1457,7 @@ export const translations: Record<Language, SiteDictionary> = {
           `All overdue installments cleared · ${count} payments due this week`,
         allPaidSummary: 'All installments are fully settled',
         openSnagsSummary: (count) =>
-          `, with ${count} open inspection snags across Villette and SODIC West.`,
+          `, with ${count} open inspection snags across Villette and West Park.`,
         allSnagsClosedSummary: ', and all inspection snags are resolved and handover-ready.',
         priorityFollowUpPrefix: 'Top Priority:',
         upcomingTasksTitle: 'Upcoming Tasks',
@@ -1498,7 +1477,7 @@ export const translations: Record<Language, SiteDictionary> = {
         sortNewest: 'Newest',
         sortDeadline: 'Due Date',
         sortPriority: 'Priority',
-        projectFilterLabel: 'Filter by SODIC project',
+        projectFilterLabel: 'Filter by project',
         filters: {
           all: 'All',
           'in-progress': 'In Progress',
@@ -1736,7 +1715,7 @@ export const translations: Record<Language, SiteDictionary> = {
         snagReopened: 'Snag reopened for review',
         snagAdded: 'Inspection snag logged',
         sharedAgain: 'Shared again to chat',
-        sharedToChat: 'Task shared to SODIC team chat',
+        sharedToChat: 'Task shared to team chat',
         openChat: 'Open Chat',
         attachedToChat: 'Task card attached in team chat',
         reminderSentTo: (name) => `Reminder sent to ${name}`,

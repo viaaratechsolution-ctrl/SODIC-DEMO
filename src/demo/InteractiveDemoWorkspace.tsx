@@ -39,7 +39,7 @@ import {
   MatterCategory,
   MatterChecklistStep,
   MatterDocument,
-  SodicProjectFilter,
+  ProjectFilter,
   TaskStatus,
   TaskStatusFilter,
 } from './demoTypes';
@@ -118,7 +118,7 @@ export const InteractiveDemoWorkspace: React.FC = () => {
   const [detailTaskId, setDetailTaskId] = useState<string>(DEFAULT_DETAIL_TASK_ID);
   const [myTaskId, setMyTaskId] = useState<string>(DEFAULT_MY_TASK_ID);
   const [taskStatusFilter, setTaskStatusFilter] = useState<TaskStatusFilter>('all');
-  const [projectFilter, setProjectFilter] = useState<SodicProjectFilter>('all');
+  const [projectFilter, setProjectFilter] = useState<ProjectFilter>('all');
   const [taskPriorityFilter, setTaskPriorityFilter] = useState<'all' | 'high'>('all');
   const [createPresetCategory, setCreatePresetCategory] = useState<MatterCategory | null>(null);
   const [remindedMember, setRemindedMember] = useState<boolean>(false);

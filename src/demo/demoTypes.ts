@@ -22,8 +22,8 @@ export type MatterCategory =
   | 'contracts'
   | 'customer-care';
 
-export type SodicProjectKey = 'east-town' | 'villette' | 'sodic-west';
-export type SodicProjectFilter = 'all' | SodicProjectKey;
+export type ProjectKey = 'east-town' | 'villette' | 'west-park';
+export type ProjectFilter = 'all' | ProjectKey;
 
 export type TaskStatusFilter = 'all' | 'in-progress' | 'completed' | 'pending';
 export type PerformancePeriod = 'today' | 'week' | 'month';
@@ -102,7 +102,7 @@ export interface DemoTask {
   description: string;
   descriptionEn?: string;
   category: MatterCategory;
-  projectKey: SodicProjectKey;
+  projectKey: ProjectKey;
   matterRef: string;
   unitCode: string;
   clientName: string;

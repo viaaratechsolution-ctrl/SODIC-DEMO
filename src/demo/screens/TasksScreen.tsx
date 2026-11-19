@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { DemoEmployee, DemoTask, SodicProjectFilter, TaskStatusFilter } from '../demoTypes';
+import { DemoEmployee, DemoTask, ProjectFilter, TaskStatusFilter } from '../demoTypes';
 
 export type TaskSortBy = 'default' | 'deadline' | 'priority';
 
@@ -19,8 +19,8 @@ interface TasksScreenProps {
   employees: DemoEmployee[];
   statusFilter: TaskStatusFilter;
   onStatusFilterChange: (filter: TaskStatusFilter) => void;
-  projectFilter: SodicProjectFilter;
-  onProjectFilterChange: (project: SodicProjectFilter) => void;
+  projectFilter: ProjectFilter;
+  onProjectFilterChange: (project: ProjectFilter) => void;
   priorityFilter: 'all' | 'high';
   onClearPriorityFilter: () => void;
   onSelectTask: (taskId: string) => void;
@@ -63,11 +63,11 @@ export const TasksScreen: React.FC<TasksScreenProps> = ({
     { id: 'pending', label: tasksT.filters.pending },
   ];
 
-  const projectTabs: { id: SodicProjectFilter; label: string }[] = [
+  const projectTabs: { id: ProjectFilter; label: string }[] = [
     { id: 'all', label: projectsT.all },
     { id: 'east-town', label: projectsT['east-town'] },
     { id: 'villette', label: projectsT.villette },
-    { id: 'sodic-west', label: projectsT['sodic-west'] },
+    { id: 'west-park', label: projectsT['west-park'] },
   ];
 
   const filteredTasks = useMemo(() => {

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
+  Building2,
   Calendar,
   Camera,
   CheckCheck,
@@ -13,7 +14,6 @@ import {
   Smile,
 } from 'lucide-react';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { FIRM_INFO } from '../demoData';
 import { DemoEmployee, DemoMessage, DemoTask } from '../demoTypes';
 
 interface TeamChatScreenProps {
@@ -122,11 +122,12 @@ export const TeamChatScreen: React.FC<TeamChatScreenProps> = ({
       <div className="relative z-20 shrink-0 px-3.5 pt-2 pb-2 bg-[#f8fafc] border-b border-slate-200/60">
         <div className="rounded-2xl bg-white p-3 shadow-[0_2px_10px_rgba(15,23,42,0.04)] border border-slate-100 flex items-center justify-between gap-2">
           <div className="flex items-center gap-2.5 min-w-0">
-            <img
-              src={FIRM_INFO.emblem}
-              alt={t.brand.sodicLogoAlt}
-              className="size-10 rounded-full bg-white object-contain p-0.5 ring-1 ring-slate-200 shrink-0"
-            />
+            <span
+              aria-hidden="true"
+              className="size-10 rounded-full bg-[#e6f7f5] text-[#0d9488] ring-1 ring-teal-200/70 flex items-center justify-center shrink-0"
+            >
+              <Building2 className="size-5" />
+            </span>
             <div className="min-w-0">
               <div className="flex items-center gap-1">
                 <p className="text-[13px] font-bold text-slate-900 truncate">

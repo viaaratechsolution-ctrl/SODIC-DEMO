@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './sections/HeroSection';
-import { SodicShowcaseSection } from './sections/SodicShowcaseSection';
 import { AboutSection } from './sections/AboutSection';
 import { ProductSection } from './sections/ProductSection';
 import { HowItWorksSection } from './sections/HowItWorksSection';
@@ -26,10 +25,7 @@ export default function App() {
         {/* 2. Hero Section (#top) */}
         <HeroSection />
 
-        {/* 3. Dedicated SODIC Showcase Section */}
-        <SodicShowcaseSection />
-
-        {/* 4. About Viaara Tech (#about) */}
+        {/* 3. About Viaara Tech (#about) */}
         <AboutSection />
 
         {/* 5. The Product (#app) */}

@@ -31,7 +31,7 @@ import {
   MatterCategory,
   MatterChecklistStep,
   MatterDocument,
-  SodicProjectKey,
+  ProjectKey,
   TaskPriority,
 } from '../demoTypes';
 
@@ -91,15 +91,15 @@ const CATEGORIES: CategoryDef[] = [
   },
   {
     id: 'inspection',
-    prefix: 'SW',
-    unitCode: 'SW-PH4-19',
+    prefix: 'WP',
+    unitCode: 'WP-PH4-19',
     defaultTitle: {
-      ar: 'معاينة موقع - سوديك ويست',
-      en: 'Site Inspection – SODIC West',
+      ar: 'معاينة موقع - ويست بارك',
+      en: 'Site Inspection – West Park',
     },
     defaultCompound: {
-      ar: 'سوديك ويست · الشيخ زايد',
-      en: 'SODIC West · Sheikh Zayed',
+      ar: 'ويست بارك · الشيخ زايد',
+      en: 'West Park · Sheikh Zayed',
     },
     defaultDesc: {
       ar: 'جولة فحص ومطابقة التشطيبات والمرافق في الموقع قبل اعتماد موعد التسليم النهائي للعميل.',
@@ -393,20 +393,20 @@ export const CreateTaskScreen: React.FC<CreateTaskScreenProps> = ({
 
     const activeCat = CATEGORIES.find((item) => item.id === category) || CATEGORIES[1];
     const resolvedCompound = compoundName.trim() || activeCat.defaultCompound[lang];
-    const inferredProjectKey: SodicProjectKey =
+    const inferredProjectKey: ProjectKey =
       resolvedCompound.includes('إيست تاون') ||
       resolvedCompound.toLowerCase().includes('east town')
         ? 'east-town'
-        : resolvedCompound.includes('سوديك ويست') ||
-          resolvedCompound.toLowerCase().includes('sodic west')
-        ? 'sodic-west'
+        : resolvedCompound.includes('ويست بارك') ||
+          resolvedCompound.toLowerCase().includes('west park')
+        ? 'west-park'
         : 'villette';
 
     const defaultCompoundPair =
       inferredProjectKey === 'east-town'
         ? { ar: 'إيست تاون · القاهرة الجديدة', en: 'East Town · New Cairo' }
-        : inferredProjectKey === 'sodic-west'
-        ? { ar: 'سوديك ويست · الشيخ زايد', en: 'SODIC West · Sheikh Zayed' }
+        : inferredProjectKey === 'west-park'
+        ? { ar: 'ويست بارك · الشيخ زايد', en: 'West Park · Sheikh Zayed' }
         : { ar: 'فيليت · القاهرة الجديدة', en: 'Villette · New Cairo' };
 
     const trimmedTitle = title.trim();
@@ -481,7 +481,7 @@ export const CreateTaskScreen: React.FC<CreateTaskScreenProps> = ({
       category,
       projectKey: inferredProjectKey,
       matterRef,
-      unitCode: unitCode.trim() || 'SODIC-2026',
+      unitCode: unitCode.trim() || 'UNIT-2026',
       clientName: clientAr,
       clientNameEn: clientEn,
       compoundName: compoundAr,

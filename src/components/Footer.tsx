@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import { SodicLogo } from './SodicLogo';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -20,12 +19,9 @@ export const Footer: React.FC = () => {
           <span className="text-border" aria-hidden="true">
             |
           </span>
-          <div className="flex items-center gap-2.5">
-            <SodicLogo size="sm" />
-            <span className="text-xs font-medium text-muted-foreground">
-              {t.footer.sodicTag}
-            </span>
-          </div>
+          <span className="text-xs font-medium text-muted-foreground">
+            {t.footer.platformTag}
+          </span>
         </div>
         <p className="text-sm text-muted-foreground text-center">{t.footer.copyright}</p>
       </div>
